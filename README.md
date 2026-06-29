@@ -1,4 +1,5 @@
-# Flask DevOps - 2026 Summer (NOT SPRING!!!)
+# Summer Devops Flask
+
 ## Usage
 This is a test of Git/GitHub/Docker for Computing Tools for the Workforce.
 
