@@ -22,7 +22,7 @@ def config():
 	return jsonify(load_config())
 
 
-@app.get('/api/status/')
+@app.get('/api/status')
 def status():
 	cfg = load_config()
 	routes = sorted(str(rule) for rule in app.url_map.iter_rules())
