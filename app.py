@@ -21,6 +21,18 @@ def health():
 def config():
 	return jsonify(load_config())
 
+
+@app.get('/api/status/')
+def status():
+	cfg = load_config()
+	routes = sorted(str(rule) for rule in app.url_map.iter_rules())
+	return jsonify({
+		'app_name': cfg['app_name'],
+		'version': cfg['version'],
+		'routes': routes
+	})
+
+
 @app.get('/')
 def home():
 	cfg = load_config()
